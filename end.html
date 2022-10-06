@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin de la partida</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/end.css">
+
+</head>
+<body>
+    <div  class="container">
+        <div id="end" class="flex-colum flex-center">
+            <h1>Fin de la partida</h1>
+            <h2 id="finalScore" class="endScore">Score: 0</h2>
+            <form class="end-form-container">
+                <h2 id="end-text">Introduce tu nombre</h2>
+                <input type="text" name="name" id="username" placeholder="Nombre">
+                <button class="endBtn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Guardar</button>
+                <button class="endBtn" id="goHomeBtn">
+                    <a href="index.html" class="aBtn">Volver al inicio</a>
+                </button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="./js/end.js"></script> 
+</body>
+</html>

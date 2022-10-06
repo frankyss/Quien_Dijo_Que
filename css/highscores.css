@@ -1,0 +1,26 @@
+.backBtn{
+    padding: 2rem 0;
+    width: 40rem;
+    margin-bottom: 1rem;
+    background: rgb(40, 102, 196);
+    border-radius: 4px;
+    
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    color: #fff;
+}
+
+#highScoresList{
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score{
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
