@@ -1,5 +1,6 @@
 body{
     color: white;
+    margin-top: 15px;
 }
 
 #game{
@@ -9,6 +10,7 @@ body{
 
 
 .gif{
+    display: none;
     position: absolute;
     top: 160px;
     left: 0px;
@@ -20,7 +22,6 @@ body{
     text-align: center;
     width: 900px;
     height: 650px;
-    display: none;
     transition: opacity 2s ease-in-out;
     
 }
@@ -48,15 +49,14 @@ body{
     font-size: 3rem;
     min-width: 20rem;
 }
-
+/*
 .choice-text:hover{
-    cursor: pointer;
     
     transform: scale(1.25);
     transform: transform 0.2s;
-    color: black;
+    color: rgb(255, 255, 255);
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
-}
+}*/
 
 .choice-prefix{
     width: 400px;
@@ -68,8 +68,8 @@ body{
     text-align: center;
     font-size: 24px;
     width: 400px;
-    
     justify-items: center;
+    cursor: pointer;
 }
 
 .correct{
@@ -161,7 +161,7 @@ background: linear-gradient(32 deg, rgba(230, 29, 29) 0%, rgba(230, 11, 11) 100%
 
 @media screen and (max-width: 800px){
     .container{
-        height: 160vh;
+        height: 120vh;
         
     }
 
@@ -169,7 +169,7 @@ background: linear-gradient(32 deg, rgba(230, 29, 29) 0%, rgba(230, 11, 11) 100%
     #choices{
         grid-template-columns: 1fr;
         margin-left: 25%;
-        margin-top: -150px;
+        margin-top: -100px;
         transform: scale(0.7);
     }
 
@@ -203,6 +203,45 @@ background: linear-gradient(32 deg, rgba(230, 29, 29) 0%, rgba(230, 11, 11) 100%
         width: 400px;
         margin-left: 27%;
         
+    }
+
+    .choice-text:hover .choice-text:hover{
+        display: none;
+    }
+
+    .choice-text{
+        position: absolute;
+        padding: 2rem;
+        transform: translate(80px, -120px);
+    }
+    .gif{
+        position: absolute;
+        top: -300px;
+        left: 0px;
+        right: 0;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0.8);
+        align-items: center;
+        z-index: 8;
+        text-align: center;
+        width: 900px;
+        height: 650px;
+        display: none;
+        transition: opacity 2s ease-in-out;
+        
+    }
+    
+    .giphy-embed{
+        display: inline-block;
+        width: 300px;
+        margin: 300px 60px 20px 20px;
+        margin-top: 70px;
+    }
+
+    .choice-prefix{
+        width: 150px;
+        height: 150px;
+        margin: 10px 0px 0px 10px;
     }
 }
 

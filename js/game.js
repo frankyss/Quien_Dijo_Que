@@ -19,7 +19,15 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: "\"El vecino, es el que el vecino elige para alcalde\"",
+        question: "\"Toqué a Messi para asegurarme de que es un ser humano\"",
+        choice1: 'G. Buffon',
+        img1: 'Buffon',
+        choice2: 'Karius',
+        img2: 'Karius',
+        answer: 1,
+    },
+    {
+        question: "\"Dije que bajaría los impuestos y los estoy subiendo\"",
         choice1: 'M.Rajoy',
         img1: 'Rajoy',
         choice2: 'Darth Vader',
@@ -27,27 +35,37 @@ let questions = [
         answer: 1,
     },
     {
-        question: "\"El vecino, es el que el vecino elige para alcalde\"",
-        choice1: 'M.Rajoy',
-        img1: 'Rajoy',
-        choice2: 'Darth Vader',
-        img2: 'Vader',
+        question: "\"El fútbol no es un juego, es magia\"",
+        choice1: 'Pep Guardiola',
+        img1: 'Guardiola',
+        choice2: 'D. Beckham',
+        img2: 'Beckham',
         answer: 2,
     },
     {
-        question: "\"El vecino, es el que el vecino elige para alcalde\"",
-        choice1: 'Niko Bellic',
-        img1: 'Vader',
-        choice2: 'paco',
-        img2: 'Rajoy',
+        question: "\"De mí se han dicho auténticas barbaridades: Han dicho que tengo sida, que soy catalán...\"",
+        choice1: 'Toni Cantó',
+        img1: 'Canto',
+        choice2: 'Camilo Sesto',
+        img2: 'Sesto',
+        answer: 2,
+    },
+
+    {
+        question: "\"¿No crees que si estuviera equivocado lo sabría?\"",
+        choice1: 'Sheldon Cooper',
+        img1: 'Sheldon',
+        choice2: 'Perez Reverte',
+        img2: 'Reverte',
         answer: 1,
     },
+
     {
-        question: "\"El vecino, es el que el vecino elige para alcalde\"",
-        choice1: 'Niko Bellic',
-        img1: 'Vader',
-        choice2: 'Alex de la Iglesia',
-        img2: 'Rajoy',
+        question: "\"Yo lo convertiré en legal\"",
+        choice1: 'Palpatine',
+        img1: 'Palpatine',
+        choice2: 'Diaz Ayuso',
+        img2: 'Ayuso',
         answer: 1,
     }
 ];
@@ -139,10 +157,17 @@ choices.forEach(choice => {
         selectedChoice.parentElement.classList.add(classToApply);
         if (classToApply === "correct") {
             incrementScore(SCORE_POINTS);
+            
             mostrarGifWin();
+
+            
+            
+            
            
         }else{
+            
             mostrarGifLose();
+            
             
         }
         setTimeout(() => {
@@ -157,8 +182,17 @@ choices.forEach(choice => {
 
 
 function mostrarGifWin(){
-    
-    var cadGifWin = "https://giphy.com/embed/a0h7sAqON67nO";
+    var arrSuccessGif = {
+        0: "./img/success-1.gif",
+        1: "./img/success-2.gif",
+        2: "./img/success-3.gif",
+        3: "./img/success-4.gif",
+        4: "./img/success-5.gif",
+    }
+
+    var  numIndex = Math.floor(Math.random() * 4);
+    var cadGifWin = "" + arrSuccessGif[numIndex];
+
     gifSrc.src = cadGifWin;
     gifWin.style.display = "block";
     
@@ -170,7 +204,16 @@ function mostrarGifWin(){
 
 function mostrarGifLose(){
     
-    var cadGifLose = "https://giphy.com/embed/3o7TKr3nzbh5WgCFxe"
+    var arrFailGif = {
+        0: "./img/loser-1.gif",
+        1: "./img/loser-2.gif",
+        2: "./img/loser-3.gif",
+        3: "./img/loser-4.gif",
+    }
+
+    var  numIndex = Math.floor(Math.random() * 3);
+    var cadGifLose = "" + arrFailGif[numIndex];
+
     gifSrc.src = cadGifLose;
     gifWin.style.display = "block";
 
